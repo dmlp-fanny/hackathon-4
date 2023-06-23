@@ -2,6 +2,7 @@ import { useState,useEffect } from "react";
 import key from "../../key"
 import AuthorPhoto from "./AuthorPhoto"
 import { useParams } from "react-router-dom";
+import BackBtn from "./BackBtn";
 
 
 export default function AuthorDetail() {
@@ -17,8 +18,6 @@ export default function AuthorDetail() {
         const data = await response.json();
 
         setSearchResults(data);    
-
-        console.log(data);
     }
 
     useEffect(() => { 
@@ -27,13 +26,28 @@ export default function AuthorDetail() {
       
     return (
         <div className="authordetail">
+            <BackBtn />
             <h1>Author's information</h1>
             <ul>
-                <li>Personal information</li>
-                <li>Download</li>
-                <li>Likes</li>
+                
+                    {searchResults === null 
+                    ?
+                    ""
+                    :
+                    <div>
+                        Author name: {searchResults.first_name}
+                        <br />
+                        User name: {searchResults.username}
+                        <br />
+                        Bio: {searchResults.bio}
+                    </div>
+                    
+                    }
+                
+              
+                    
             </ul>
-            <AuthorPhoto />
+            <AuthorPhoto author={author}/>
         </div>
     )
 }
