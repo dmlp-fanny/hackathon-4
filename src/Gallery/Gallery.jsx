@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import key from "../../key";
 import Picture from "../Picture/Picture";
 import "./gallery.scss";
+import Context from "../Context";
 
-export default function Gallery({ searchKeyword }) {
+export default function Gallery() {
   const [pictures, setPictures] = useState(null);
   const [perPage, setPerPage] = useState(12);
+
+  const { context: {searchKeyword} } = useContext(Context)
 
   const fetchData = async () => {
     const response = await fetch(
@@ -23,7 +26,7 @@ export default function Gallery({ searchKeyword }) {
     <>
       <div className="pictures_container">
         {pictures === null
-          ? ""
+          ? "Loading"
           : pictures.map(picture => (
               <Picture key={picture.id} picture={picture} />
             ))}

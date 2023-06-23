@@ -2,20 +2,18 @@ export default function reducer (context, action) {
 
 switch (action.type) {
 
-        case 'width/decrement':
+        case 'width/set':
             return {
                 ...context,
-                width: context.width - action.payload
+                width: action.payload
             }
             break;
-
-        case 'width/increment':
+        case 'searchKeyword/set':
             return {
                 ...context,
-                width: context.width + action.payload
+                searchKeyword: action.payload
             }
-            break;
-
+            
     }
 
     return context;

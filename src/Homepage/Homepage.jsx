@@ -6,15 +6,13 @@ import Slider from "../Slider/Slider"
 
 export default function Homepage () { 
 
-    const [searchKeyword, setSearchKeyword] = useState('')
-
     return (
         <>
-        <SearchBar setSearchKeyword={setSearchKeyword} />
+        <SearchBar/>
 
         <Slider />
 
-        <Gallery searchKeyword={searchKeyword}/>
+        <Gallery />
         </> 
     
 

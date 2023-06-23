@@ -13,6 +13,7 @@ function App() {
 
   const [context, dispatch] = useReducer(reducer, {
     width: 200,
+    searchKeyword: '',
   })
 
   return (

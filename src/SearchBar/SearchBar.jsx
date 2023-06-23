@@ -1,15 +1,21 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import './SearchBar.scss'
+import Context from "../Context";
 
-export default function SearchBar ({ setSearchKeyword }) {
+export default function SearchBar () {
     const [query, setQuery] = useState(null)
+
+    const { dispatch } = useContext(Context)
 
     const handleChange = (event) => {
         setQuery((event.target.value).toLowerCase())
     }
 
     const handleClick = () => {
-        setSearchKeyword(query)
+        dispatch({
+            type: 'searchKeyword/set',
+            payload: query
+        });
     }
 
     return (
