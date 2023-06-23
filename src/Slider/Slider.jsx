@@ -9,7 +9,7 @@ export default function Slider () {
     return (
         <form>
         <div className="slidecontainer">
-            <input type="range" min="1" max="100" value="50" className="slider" />
+            <input type="range" min={0} max={100} value={50} step={1} className="slider" />
         </div>
         </form>
     )
