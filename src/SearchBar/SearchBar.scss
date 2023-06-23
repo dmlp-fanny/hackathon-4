@@ -1,0 +1,14 @@
+.searchBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+        padding: 0.6rem;
+        margin: 2rem;
+        width: 40%;
+    }
+    button {
+        width: 20%;
+        padding: 0.6rem 0;
+    }
+}

@@ -1,12 +1,14 @@
-.picture_container {
-    width: 60%;
+.pictures_container {
+    width: 80%;
     margin: 0 auto;
-    &_column {
-        display: flex;
-        flex-direction: column;
-        width: 25%;
-        .picture_card {
-           position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.picture_card {
+        max-width: 30%;
+        position: relative;
            &_image {
                 display: block;
                 width: 100%;
@@ -19,8 +21,7 @@
                 width: 100%;
                 font-size: 16px;
                 color: white;
-                // background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
+               //  background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
            }
         }
-    }
-}
+

@@ -1,16 +1,19 @@
-import { Routes, Route } from "react-router-dom"
+
 import Gallery from "../Gallery/Gallery"
 import { useState } from "react"
-import AuthorDetail from "../authordetail/AuthorDetail"
+import SearchBar from "../SearchBar/SearchBar"
 
 export default function Homepage () { 
-    const [author, setAuthor] = useState(null)
+
+    const [searchKeyword, setSearchKeyword] = useState('')
     
     return (
-        <Routes>
-            <Route path="/" element={ <Gallery setAuthor={setAuthor} author={author} />} />
-            <Route path="/author/:author" element={ <AuthorDetail /> } />
-        </Routes>
+        <>
+        <SearchBar setSearchKeyword={setSearchKeyword} />
+
+        <Gallery searchKeyword={searchKeyword}/>
+        </> 
+    
 
 
     )
