@@ -1,0 +1,33 @@
+.slidecontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40%;
+    height: 10px;
+    background: #E5E3E4;
+    outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 15px;
+    border-radius: 7px;
+    background: #469597;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 15px;
+    border-radius: 7px;
+    background: #469597;
+    cursor: pointer;
+}
