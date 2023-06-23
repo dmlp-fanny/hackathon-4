@@ -1,19 +1,15 @@
-import './picture.scss'
+import { Link } from "react-router-dom"
 
-export default function Picture ({ picture, setAuthor }) {
+export default function Picture ({ picture }) {
 
     const { alt_description, urls, tags, user } = picture
 
-    setAuthor(user.first_name)
-
     return (
-        <div className="picture_container_column">
             <div className="picture_card">
-                <img className="picture_card_image" src={urls.raw} alt={alt_description} />
+                <Link to={'/author/' + user.username}><img className="picture_card_image" src={urls.raw} alt={alt_description} /></Link>
                 <div className="picture_card_author">
                     <strong>By</strong> {user.first_name}
                 </div>
             </div>
-        </div>
     )
 } 
