@@ -3,6 +3,7 @@ import key from "../../key";
 import AuthorPhoto from "./AuthorPhoto";
 import { useParams } from "react-router-dom";
 
+
 export default function AuthorDetail() {
   const [searchResults, setSearchResults] = useState(null);
 
@@ -15,24 +16,37 @@ export default function AuthorDetail() {
 
     const data = await response.json();
 
-    setSearchResults(data);
+        setSearchResults(data);    
+    }
 
-    console.log(data);
-  };
-
-  useEffect(() => {
-    datafetching();
-  }, []);
-
-  return (
-    <div className="authordetail">
-      <h1>Author's information</h1>
-      <ul>
-        <li>Personal information</li>
-        <li>Download</li>
-        <li>Likes</li>
-      </ul>
-      <AuthorPhoto />
-    </div>
-  );
+    useEffect(() => { 
+        datafetching()
+    }, [])
+      
+    return (
+        <div className="authordetail">
+            <BackBtn />
+            <h1>Author's information</h1>
+            <ul>
+                
+                    {searchResults === null 
+                    ?
+                    ""
+                    :
+                    <div>
+                        Author name: {searchResults.first_name}
+                        <br />
+                        User name: {searchResults.username}
+                        <br />
+                        Bio: {searchResults.bio}
+                    </div>
+                    
+                    }
+                
+              
+                    
+            </ul>
+            <AuthorPhoto author={author}/>
+        </div>
+    )
 }
