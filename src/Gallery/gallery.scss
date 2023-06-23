@@ -1,14 +1,32 @@
-.pictures_container {
+.pictures_container_30 {
+    width: 80%;
+    height: 200vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.pictures_container_50 {
     width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.pictures_container_100 {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     gap: 10px;
 }
 
 .picture_card {
+
         position: relative;
            &_image {
                 display: block;

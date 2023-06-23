@@ -8,6 +8,7 @@ export default function Homepage () {
 
     return (
         <>
+        <h1>Search for Photos</h1>
         <SearchBar/>
 
         <Slider />

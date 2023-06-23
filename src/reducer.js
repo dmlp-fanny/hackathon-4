@@ -13,6 +13,12 @@ switch (action.type) {
                 ...context,
                 searchKeyword: action.payload
             }
+
+        case 'page/change':
+            return {
+                ...context,
+                page: context.page + action.payload
+            }
             
     }
 

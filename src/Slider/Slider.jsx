@@ -16,7 +16,7 @@ export default function Slider () {
     return (
         <form>
         <div className="slidecontainer">
-            <input type="range" min="100" max="1000" defaultValue={ width } onChange={ handleChange } step="50" className="slider" />
+            <input type="range" min="10" max="100" defaultValue={ width } onChange={ handleChange } step="2" className="slider" />
         </div>
         </form>
     )

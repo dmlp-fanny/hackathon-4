@@ -12,8 +12,9 @@ import reducer from "./reducer";
 function App() {
 
   const [context, dispatch] = useReducer(reducer, {
-    width: 200,
+    width: 30,
     searchKeyword: '',
+    page: 1,
   })
 
   return (

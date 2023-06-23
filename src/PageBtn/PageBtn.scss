@@ -1,0 +1,23 @@
+.pagination {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    justify-content: space-between;
+
+    .btnPagination {
+        border: none;
+        padding: 0.6rem 1rem;
+        background-color: darkcyan;
+        cursor: pointer;
+    }
+
+    .btnEmpty {
+        border: darkcyan 1px solid;
+        padding: 0.6rem 1rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+}
+ 

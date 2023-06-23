@@ -9,7 +9,7 @@ export default function Picture ({ picture }) {
     const { context: {width} } = useContext(Context)
 
     return (
-            <div className="picture_card" style={ {width: + width + 'px'} }>
+            <div className="picture_card" style={ {width: + width + '%'} }>
                 <Link to={'/author/' + user.username}><img className="picture_card_image" src={urls.small} alt={alt_description} /></Link>
                 <div className="picture_card_author">
                     <strong>By</strong> {user.first_name}
