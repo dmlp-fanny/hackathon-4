@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import key from "../../key";
 import AuthorPhoto from "./AuthorPhoto";
 import { useParams } from "react-router-dom";
+import BackBtn from "./BackBtn";
 
 
 export default function AuthorDetail() {

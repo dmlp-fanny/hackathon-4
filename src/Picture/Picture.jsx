@@ -10,7 +10,7 @@ export default function Picture ({ picture }) {
 
     return (
             <div className="picture_card" style={ {width: + width + 'px'} }>
-                <Link to={'/author/' + user.username}><img className="picture_card_image" src={urls.raw} alt={alt_description} /></Link>
+                <Link to={'/author/' + user.username}><img className="picture_card_image" src={urls.small} alt={alt_description} /></Link>
                 <div className="picture_card_author">
                     <strong>By</strong> {user.first_name}
                 </div>
