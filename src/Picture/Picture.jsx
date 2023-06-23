@@ -1,8 +1,10 @@
 import './picture.scss'
 
-export default function Picture ({ picture }) {
+export default function Picture ({ picture, setAuthor }) {
 
     const { alt_description, urls, tags, user } = picture
+
+    setAuthor(user.first_name)
 
     return (
         <div className="picture_container_column">

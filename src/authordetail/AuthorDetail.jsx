@@ -1,11 +1,14 @@
 import { useState,useEffect } from "react";
 import key from "../../key"
 import AuthorPhoto from "./AuthorPhoto"
+import { useParams } from "react-router-dom";
 
 
 export default function AuthorDetail() {
-    const [searchResults,setSearchResults] = useState()
-    const [author,setAuthor] = useState ("");
+
+    const [ searchResults,setSearchResults ] = useState(null)
+
+    const { author } = useParams()
 
     const datafetching = async () => {
     
@@ -14,9 +17,13 @@ export default function AuthorDetail() {
         const data = await response.json();
 
         setSearchResults(data);    
+
+        console.log(data);
     }
 
-    useEffect(() => { datafetching()}, [])
+    useEffect(() => { 
+        datafetching()
+    }, [])
       
     return (
         <div className="authordetail">
